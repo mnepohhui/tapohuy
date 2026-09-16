@@ -1,3 +1,129 @@
-body {
+* {
     margin: 0;
+    padding: 0;
+
+}
+
+
+
+body {
+    background-color: black;
+
+}
+
+
+.cursorcont {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-out;
+
+
+}
+
+.cursorcircle {
+
+    width: 9px;
+    height: 9px;
+    background-color: white;
+    border-radius: 100%;
+    z-index: 9999;
+    transform-origin: center;
+    transform: translate(-50%, -50%);
+    transition: all 1s ease-out;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.linecontainer {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    padding: 40px 0px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
+
+
+.line {
+    font-family: verdana;
+    color: white;
+    font-size: 140px;
+    white-space: nowrap;
+
+}
+
+
+.gridcontainer {
+    width: 100%;
+    height: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+
+.grid_item {
+
+
+    font-family: verdana;
+    font-size: 70px;
+
+    outline: 1px solid white;
+    color: white;
+    box-sizing: border-box;
+    padding: 150px;
+    overflow: hidden;
+}
+
+
+
+.line1cursor {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(240, 240, 45);
+}
+
+
+.line2cursor {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(240, 75, 188);
+}
+
+
+
+.gridstar {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center;
+    transform: rotate(0);
+    animation-name: srotation;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: all 0.2s ease-out;
+    top: 0;
+    left: 0;
+    transform: translate(330px, 100px);
+}
+
+
+@keyframes srotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+
 }
